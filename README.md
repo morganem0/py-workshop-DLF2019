@@ -14,14 +14,9 @@ If you have the Jupyter Notebook software installed on your own computer, you ca
 Note that Binder can be slow to load -- 5-10 minutes for the notebook to load after opening this URL is not unusual! 
 
 **Binder location for Jupyter Notebook from github:**  
+Binder location for notebook from github:   
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/morganem0/py-workshop-DLF2019/master)
-
-
-Back-up Binder location for notebook from gitlab: 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/morganem%2Fpy-workshop-dlf2019/master)
-
-
 
 ### Workshop Outline
 
@@ -35,6 +30,11 @@ We will walk through three brief examples with digital collections metadata file
 | Example 3: Merge info from separate files  |  12 mins | 
 | Wrap-up: review resources, options for installing/running python | 5 mins| 
 
+### Backup binder location
+
+Back-up Binder location for notebook from gitlab:  
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/morganem%2Fpy-workshop-dlf2019/master)
 
 ### Backup options: Static Versions of Notebook 
 

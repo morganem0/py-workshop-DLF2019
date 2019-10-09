@@ -13,10 +13,14 @@ If you have the Jupyter Notebook software installed on your own computer, you ca
 
 Note that Binder can be slow to load -- 5-10 minutes for the notebook to load after opening this URL is not unusual! 
 
-Binder location for Jupyter Notebook from github: 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/morganem%2Fpy-workshop-dlf2019/master)
+**Binder location for Jupyter Notebook from github:**  
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/morganem0/py-workshop-DLF2019/master)
+
 
 Back-up Binder location for notebook from gitlab: 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/morganem%2Fpy-workshop-dlf2019/master)
+
 
 
 ### Workshop Outline

@@ -1,0 +1,4 @@
+name: py-workshop-dlf2019
+dependencies:
+  - pandas
+  - matplotlib

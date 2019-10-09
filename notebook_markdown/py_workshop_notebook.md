@@ -19,9 +19,9 @@ At the end of the notebook, there is a bonus example about dealing with duplicat
     * [Exercise 1: Modify this notebook](#ex1)
     * [Exercise 2: Run code and markdown in cells](#ex2)
 * [Example 1: Explore a dataset](#md1)
-    * [Exercise 3: Evaluate subjects data in a collection](#ex3)
+    * [Exercise 3: Try out pandas methods](#ex3)
 * [Example 2: Compare a group of metadata files](#md2)
-    * [Exercise 4](#ex4)
+    * [Exercise 4: Evaluate subjects data in a collection](#ex4)
 * [Example 3: Merge information from separate files](#md3)
     * [Exercise 5: Other ways to merge](#ex5)
 * [Bonus Example: Find and remove duplicates](#md4)
@@ -39,10 +39,10 @@ After each example there will be an exercise you can try out on your own.
 ----
   
 **Intro, & using the jupyter notebook (10 mins)**
-    * Exercises 1 & 2: modify notebook, run code and markdown 
+    * Exercises 1 & 2: how to add cells, execute code and markdown cells
     
 **Example 1: Explore a dataset (12 mins)** 
-    * Exercise 3: Evaluate subjects data  
+    * Exercise 3: Evaluate subjects data from a collection
     
 **Example 2: compare a group of metadata files (12 mins)**
     * Exercise 4: 
@@ -64,7 +64,8 @@ After each example there will be an exercise you can try out on your own.
 
 ## Using this Jupyter Notebook <a name="usingjn"></a>
 
-You can edit the notebook to run code cells and generate output, and/or to add markdown cells.    
+You can edit the notebook to run code cells and generate output, and/or to add markdown cells.  
+
 All paths in the notebook refer to locations within the repository, to access example data and/or save output files. 
 
 ### Keyboard Shortcuts for Jupyter Notebook :
@@ -79,23 +80,39 @@ All paths in the notebook refer to locations within the repository, to access ex
 
 ###  Exercise 1: Modify this Notebook<a name="ex1"></a>
 
-Follow the instructions below to try out some of the keyboard shortcuts and get familiar with working in this notebook.
+Follow the instructions below to try out some of the jupyter keyboard shortcuts and get familiar with working in this notebook.
 
-1. Press ``CTRL + SHIFT+ P`` to show the command palette. From the command palette, you can search for any command, and run that action directly from the palette, as well as seeing the shortcut for that action if available. 
-    * Search for 'command', to find the shortcut for `enter 'command' mode`. Click on this action from the list. This cell will then switch into 'command' mode.  
-    
-    
-2. Double-click in this cell to switch the cell into 'Edit mode.' 
-   * When you double click inside the cell, the cell border will change from blue to green, and the markdown will switch from rendered to markup text. 
-   * Blue cell border  = 'command mode', used for navigating and modifying cells. 
-   * Green cell border = 'edit mode', used for adding/editing content in cells.   
-   
+**check out the 'command palette' to see all notebook actions and shortcuts**
 
-3. Once in 'edit mode' in this cell, add a bullet point below this line and type something, for example: ``'DONE'``. Then use `CTRL` + `Enter` to "run" the cell/render the markdown.  
+From the command palette, you can search for any command, and run that action directly from the palette, as well as seeing the shortcut for that action if available. 
+
+1. Press ``CTRL + SHIFT+ P`` to show the command palette. 
+    * With the palette open, search for 'edit', to find the shortcut for `enter 'edit' mode`. Click on this action from the list. This cell will then switch into 'edit' mode. 
+
+**Use shortcuts to switch between edit and command mode**
+
+Edit mode: used for adding/editing content in cells = Blue cell border
+
+Command mode: used for navigating and modifying cells = Green cell border    
+
+* Double-click in this cell to switch the cell into 'Edit mode.' 
+* When you double click inside the cell, the cell border will change from blue to green, and the markdown will switch from rendered to markup text.
+* Press `Esc` to switch back to 'command' mode. The cell border switches back to blue and you can use navigation commands (such as adding cells below/above, switching from code/markdown.)  
+* Practice switching back and forth between edit/command on a few cells. 
+
+
+**Edit the text in a Markdown cell, execute (render) a Markdown cell**
+
+* Switch this cell into 'edit mode'. 
+* Add a bullet point below these lines of text and type something, for example: ``'DONE'``. (can copy/paste example below if easier!)
+* Then use `CTRL` + `Enter` to "run" the cell/render the markdown.  
     * for example: `DONE`   
-    
 
-4. With this cell in command mode (blue border), add a cell underneath it, then add some cells above the cells you added. 
+
+
+**Add more cells**
+
+* With this cell in command mode (blue border), add a cell underneath it, then add some cells above the cells you added. 
     * press `b` to add a cell below an existing cell. 
     * You can keep pressing `b` to add more cells; it doesn't hurt anything to have empty cells in the notebook. 
     * press `a` to add a cell above an existing cell. 
@@ -105,61 +122,63 @@ Follow the instructions below to try out some of the keyboard shortcuts and get 
 
 ```
 
-
-```python
-
-```
-
-
-```python
-
-```
-
-
-```python
-
-```
-
 ### Exercise 2: Add and run code and Markdown in cells <a name="ex2"></a>
 
-Try adding code and markdown to the new cells you created in exercise 1. 
+Practice with creating cells, switching cells from code to Markdown, adding content to cells and running them. 
 
-1. Add markdown to a cell
-    * click on one of the empty cells you created. 
-    * the cell border will be green indicating it is in 'edit' mode. 
-    * if there's an `In [ ]:` to the left of the cell, this means it's a code cell. Any text you type into the cell will be treated as code. 
-    * To convert the cell to a Markdown cell, switch to Command mode by pressing `Esc`. The cell border will turn blue. 
-    * From Command mode, press `m` to switch the cell to markdown.  The `In [ ]:` to the left of the cell will disappear, indicating it is now a Markdown cell. Any test you type into the cell will now be treated as markdown. 
-    * Switch the cell back to Edit mode by clicking inside it. 
-    * In the markdown cell, type a header, and then some regular text. For example: 
-    
+**Create a Markdown cell, add some text**
+
+create a Markdown cell: 
+* click on one of the empty cells you created in Exercise 1, or just create another one here. 
+* A brand-new cell will be in command mode (blue cell border)  
+* if there's an `In [ ]:` to the left of the cell, this means it's a code cell. Any text you type into the cell will be treated as code. 
+* To convert the cell to a Markdown cell, press `m` to switch the cell to markdown.  
+    * The `In [ ]:` to the left of the cell will disappear, indicating it is now a Markdown cell. Any test you type into the cell will now be treated as markdown. 
+* If this did not work, make sure the cell is in command mode. Switch to Command mode by pressing `Esc`. The cell border will turn blue. 
+
+add text in a Markdown cell: 
+* Switch the cell to Edit mode by clicking inside it. 
+* In the markdown cell, type a header, and then some regular text. For example: 
+
     ```
     #### here's an example header  
     and some regular paragraph text 
     ```
-    
-1. Run a markdown cell
-    * As you did in exercise 1, press `CTRL` + `Enter` to "run" the markdown cell/render the markdown that you just typed.   
-    
-1. Add code to a cell
-    * click on one of the empty cells you created. 
-    * the cell border will be green indicating it is in 'edit' mode. 
-    * Look for the `In [ ]:` to the left of the cell, to make sure it's a code cell. 
-    * if there's no  `In [ ]:` to the left of the cell, switch into Command mode and convert the cell to Code by pressing `y`. 
-    * Switch the cell back to Edit mode by clicking inside it. 
-    * type a line of simple python code. For example: 
-    
+
+
+```python
+
+```
+
+#### here's an example header  
+and some regular paragraph text 
+
+**Execute/render a markdown cell**
+
+* As you did in exercise 1, press `CTRL` + `Enter` to "run" the markdown cell/render the markdown that you just typed.  
+* the text will display as a formatted version, and the cell border will switch from green to blue. 
+
+
+**Add code to a code cell**
+
+Work with a code cell: 
+* Click on one of the empty cells you have created, or just create a new one here. 
+* Look for the `In [ ]:` to the left of the cell, to make sure it's a code cell. 
+* if there's no  `In [ ]:` to the left of the cell, switch into Command mode and convert the cell to Code by pressing `y`. 
+* Switch the cell back to Edit mode by clicking inside it. The cell border will turn green. 
+
+Add some code: 
+* Type a line of simple python code. For example: 
+
      ```
      print("here's a line of python code output.")
      ```
 
 
-1. Run the code cell. 
+**Run the code cell.**
 
-  
+* As you did with the markdown cells, press `CTRL` + `Enter` to run the cell and execute the code in it. 
 
-#### here's an example header  
-and some regular paragraph text 
 
 
 ```python
@@ -170,27 +189,42 @@ print("here's a line of python code output.")
 ```
 
     here's a line of python code output.
-    
+
 
 
 ```python
 
 ```
 
-## Example 1: Explore a Dataset with pandas<a name="md1"></a>
+## Metadata Example 1: Explore a Dataset with pandas<a name="md1"></a>
 
-The first example script demonstrates importing the pandas library, reading a data file into a dataframe, and using basic pandas functions for exploring the dataset. 
+This example walks through getting oriented with using python/pandas for viewing and analysing descriptive metadata files.
+
+In this scenario we are working with a small group of metadata files that have varied sets of inconsistently organized fields.   
+
+We will import metadata from csv and tsv files, exclude empty and/or irrelevant fields from our dataframes, and identify a few relevant fields to focus on for assessment, selecting the same set of fields from each collection. 
+
+**Learning objectives in this example:**
+
+* reading a data file into a dataframe
+* creating dataframes with differently delimited data
+* assessing overall size and contents of the dataframe
+* selecting relevant columns to include for a task
+* identifying and changing datatypes
+
 
 #### Import libraries for Python
 
-Importing the libraries loads them into memory so that Python can use them. 
+Importing libraries loads them into memory so that Python can use them. 
+
+Libraries provide specific methods for particular kinds of work. 
 
 We are importing: 
 * the pandas data analysis library
 * `os` for working with files and directories  
 * `matplotlib` for generating some basic graphs from data
 
-Lastly, setting `%matplotlib inline` allows plots to render within the notebook. 
+Setting `%matplotlib inline` allows plots to render within the notebook. 
 
 
 
@@ -204,9 +238,9 @@ import matplotlib.pyplot as plt
 
 #### Next: check that we are in the right place!!
 
-We'll do a couple quick checks with python methods in the os library to get oriented and make sure that we're in the right directory. 
+We'll do a couple quick checks to get oriented and make sure that we're in the right directory. 
 
-This is not really necessary, because this jupyter notebook is located in/running from within the 'notebook_exercises' subfolder, so we already know that we will be running commands relative to that location, but it's always nice to take a look around to see where you are. 
+This is not really necessary, because this notebook is located in/running from within the 'notebook_exercises' subfolder, so we already know that we will be running commands relative to that location, but it's always nice to take a look around to see where you are. 
 
 
 ```python
@@ -218,7 +252,7 @@ os.getcwd()
 
 
 
-    'C:\\Users\\morganem\\GitlabRepos\\py-workshop-DLF2019\\notebook_exercises'
+    '/home/jovyan/notebook_exercises'
 
 
 
@@ -232,11 +266,11 @@ os.listdir()
 
 
 
-    ['.ipynb_checkpoints',
-     'exampleData',
-     'filesizes',
+    ['filesizes',
      'output',
-     'py_workshop_notebook.ipynb']
+     'py_workshop_notebook.ipynb',
+     'exampleData',
+     '.ipynb_checkpoints']
 
 
 
@@ -250,28 +284,29 @@ os.listdir('./exampleData/')
 
 
 
-    ['03823_access_images.csv',
-     '03823_masters.csv',
-     '03823_metadata.txt',
-     '03883.txt',
-     '60001.txt',
+    ['03823_masters.csv',
      'coll_dupes_example.csv',
      'maps.csv',
-     'maps_date.csv']
+     '60001.txt',
+     '03823_metadata.txt',
+     '03883.txt',
+     '03823_access_images.csv']
 
 
 
 #### Create a dataframe from example datasets
 
-A dataframe is a Python object with rows and columns that is very flexible and powerful for working with data. You can read many different data formats into a dataframe, including csv, tsv, and even excel sheets. 
+A dataframe is a Python object with rows and columns that can be selected for running calculations and manipulating the data in a lot of ways. 
 
-The command below uses the variable name 'maps' for creating a dataframe using pandas' read_csv function. 
+You can read many different data formats into a dataframe, including csv, tsv, and even excel sheets. 
+
+The command below uses the variable name 'maps' for creating a dataframe using the pandas `read_csv` function. 
 
 
 ```python
 # create a dataframe: 'maps' from the example datasheet 
 
-maps=pd.read_csv("./exampleData/maps_date.csv")
+maps=pd.read_csv("./exampleData/maps.csv")
 ```
 
 #### Inspect a dataframe
@@ -368,12 +403,20 @@ maps.info()
     Date modified                       161 non-null object
     dtypes: float64(3), object(33)
     memory usage: 45.4+ KB
-    
+
+
+**Sorting dataframe columns**
+
+Since the columns listed above are not ordered in a logical way, it's hard to look for a particular column label in the output. 
+
+Dateaframes can be sorted by rows, columns, or values to present the data according to the order we specify. 
+
+Below we'll display the column labels sorted alphabetically, which makes it easy to check if this collection has fields named  Title, Usage Rights, Date, etc. 
+
 
 
 ```python
-# Make the columns easier to scan by sorting them alphabetically 
-# Sort the dataframe to order the output of column labels from info method
+# Sort the dataframe to order the output of column labels from the info() method
 
 maps.sort_index(axis=1).info()
 ```
@@ -419,20 +462,20 @@ maps.sort_index(axis=1).info()
     filename                            161 non-null object
     dtypes: float64(3), object(33)
     memory usage: 45.4+ KB
-    
+
 
 #### View contents of the dataframe 
 
 The head() and tail() methods in pandas display the first or last n rows of data. 
 
-The default is 5 rows; below we specify 8 to see a bit more data. 
+By default head or tails will display 5 rows; below we specify 3 to see fewer rows. 
 
 Note that the column headers are no longer sorted alphabetically, because we did not apply the sort persistently.
 
 
 
 ```python
-maps.head(8)
+maps.head(3)
 ```
 
 
@@ -481,7 +524,7 @@ maps.head(8)
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>Redoubt C</td>
       <td>NaN</td>
       <td>Gilmer, Jeremy Francis, 1818-1883.</td>
@@ -505,7 +548,7 @@ maps.head(8)
       <td>2015-09-14</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>Plan of Battery McIntosh</td>
       <td>NaN</td>
       <td>Gilmer, Jeremy Francis, 1818-1883.</td>
@@ -529,7 +572,7 @@ maps.head(8)
       <td>2015-09-14</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>Fort DeRussy on Red River, Louisiana</td>
       <td>NaN</td>
       <td>Gilmer, Jeremy Francis, 1818-1883.</td>
@@ -552,147 +595,31 @@ maps.head(8)
       <td>2005-12-08</td>
       <td>2015-09-14</td>
     </tr>
-    <tr>
-      <th>3</th>
-      <td>Map of the country adjacent to Smithville</td>
-      <td>NaN</td>
-      <td>Gilmer, Jeremy Francis, 1818-1883.</td>
-      <td>Blackford, B. L. (Benjamin Lewis)</td>
-      <td>1864</td>
-      <td>1864</td>
-      <td>1860; 1861; 1862; 1863; 1864; 1865; 1866; 1867...</td>
-      <td>A map of the area adjacent to Smithville, made...</td>
-      <td>Maps</td>
-      <td>United States--History--Civil War, 1861-1865.;</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>276/241</td>
-      <td>Gilmer Map Number 316</td>
-      <td>276_241_E.tif</td>
-      <td>Public Domain</td>
-      <td>NaN</td>
-      <td>276_241.tif</td>
-      <td>2005-12-08</td>
-      <td>2015-09-14</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Fort Fisher and adjoining fortifications</td>
-      <td>NaN</td>
-      <td>Gilmer, Jeremy Francis, 1818-1883.</td>
-      <td>Turner, L. C.</td>
-      <td>1863</td>
-      <td>1863</td>
-      <td>1860; 1861; 1862; 1863; 1864; 1865; 1866; 1867...</td>
-      <td>A map of Fort Fisher and adjoining fortificati...</td>
-      <td>Maps</td>
-      <td>United States--History--Civil War, 1861-1865.;</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>276/245A</td>
-      <td>Gilmer Map Number 320A</td>
-      <td>276_245a_E.tif</td>
-      <td>Public Domain</td>
-      <td>NaN</td>
-      <td>276_245a.tif</td>
-      <td>2005-12-08</td>
-      <td>2015-09-14</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Plans of officer and soldier quarters and maga...</td>
-      <td>NaN</td>
-      <td>Gilmer, Jeremy Francis, 1818-1883.</td>
-      <td>NaN</td>
-      <td>1861; 1862; 1863; 1864; 1865</td>
-      <td>undated</td>
-      <td>1860; 1861; 1862; 1863; 1864; 1865; 1866; 1867...</td>
-      <td>Sketches of plans of a wharf and of officer an...</td>
-      <td>Maps</td>
-      <td>United States--History--Civil War, 1861-1865.;</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>276/186</td>
-      <td>Gilmer Map Number 11</td>
-      <td>276_186_E.tif</td>
-      <td>Public Domain</td>
-      <td>NaN</td>
-      <td>276_186.tif</td>
-      <td>2005-12-08</td>
-      <td>2015-09-14</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Map of the vicinity of Wilmington</td>
-      <td>NaN</td>
-      <td>Gilmer, Jeremy Francis, 1818-1883.</td>
-      <td>Blackford, B. L. (Benjamin Lewis)</td>
-      <td>1861; 1862; 1863; 1864; 1865</td>
-      <td>undated</td>
-      <td>1860; 1861; 1862; 1863; 1864; 1865; 1866; 1867...</td>
-      <td>A map of the vicinity of Wilmington, made unde...</td>
-      <td>Maps</td>
-      <td>United States--History--Civil War, 1861-1865.;</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>276/238</td>
-      <td>Gilmer Map Number 313</td>
-      <td>276_238_E.tif</td>
-      <td>Public Domain</td>
-      <td>NaN</td>
-      <td>276_238.tif</td>
-      <td>2005-12-08</td>
-      <td>2015-09-14</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Environs of Shreveport and its defences</td>
-      <td>NaN</td>
-      <td>Gilmer, Jeremy Francis, 1818-1883.</td>
-      <td>Helferich, P.</td>
-      <td>1864</td>
-      <td>1864</td>
-      <td>1860; 1861; 1862; 1863; 1864; 1865; 1866; 1867...</td>
-      <td>A map of the environs of Shreveport and its de...</td>
-      <td>Maps</td>
-      <td>United States--History--Civil War, 1861-1865.;</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>276/194</td>
-      <td>Gilmer Map Number 177</td>
-      <td>276_194_E.tif</td>
-      <td>Public Domain</td>
-      <td>NaN</td>
-      <td>276_194.tif</td>
-      <td>2005-12-08</td>
-      <td>2015-09-14</td>
-    </tr>
   </tbody>
 </table>
-<p>8 rows × 36 columns</p>
+<p>3 rows × 36 columns</p>
 </div>
 
 
 
 #### Explore a second dataset
 
-
+You can also use the read_csv function for other kinds of delimiters. For example, you can specify tab-delimited as with the metadata file below. 
 
 
 
 ```python
-# read in a 2nd example dataset as a separate dataframe. 
+# read in another example dataset as a separate dataframe. 
 # use sep parameter to specify tab as delimiter
 
 rev=pd.read_csv("./exampleData/60001.txt", sep='\t')
 ```
 
+**View size and columns information for second dataset**
 
+We'll again use shape and info() to get a basic sense of the second dataset. 
+
+We can see that this data sheet has nearly twice as many column labels, and tons of empty fields.  
 
 
 ```python
@@ -702,9 +629,7 @@ rev.shape
 
 
 
-    (538, 61)
-
-
+    (538, 60)
 
 
 
@@ -715,7 +640,7 @@ rev.sort_index(axis=1).info()
 
     <class 'pandas.core.frame.DataFrame'>
     RangeIndex: 538 entries, 0 to 537
-    Data columns (total 61 columns):
+    Data columns (total 60 columns):
     Additional Display                         0 non-null float64
     Alternative Title                          0 non-null float64
     Author Chief Source                        0 non-null float64
@@ -742,7 +667,6 @@ rev.sort_index(axis=1).info()
     Finding Aid                                538 non-null object
     Form                                       526 non-null object
     Has Part Of                                0 non-null float64
-    HookID                                     538 non-null object
     Is Part Of                                 0 non-null float64
     Language                                   0 non-null float64
     Local Identifier                           0 non-null float64
@@ -777,15 +701,15 @@ rev.sort_index(axis=1).info()
     Volume/Issue                               0 non-null float64
     filename                                   538 non-null object
     geonamesid                                 0 non-null float64
-    dtypes: float64(34), int64(2), object(25)
-    memory usage: 256.5+ KB
-    
+    dtypes: float64(34), int64(2), object(24)
+    memory usage: 252.3+ KB
+
 
 #### Get rid of empty columns
 
 Many of these columns are empty, so we will exclude them. 
 
-We will use the inplace attribute to apply this change to the dataframe we are currently working with.
+Use the inplace attribute to apply this change to the dataframe we are currently working with.
 
 Then check the columns again; our data is now more manageable. 
 
@@ -801,7 +725,7 @@ rev.sort_index(axis=1).info()
 
     <class 'pandas.core.frame.DataFrame'>
     RangeIndex: 538 entries, 0 to 537
-    Data columns (total 27 columns):
+    Data columns (total 26 columns):
     Collection Number           538 non-null int64
     Collection in Repository    538 non-null object
     Container type              538 non-null object
@@ -816,7 +740,6 @@ rev.sort_index(axis=1).info()
     Digital Collection          538 non-null object
     Finding Aid                 538 non-null object
     Form                        526 non-null object
-    HookID                      538 non-null object
     Location in Collection      538 non-null object
     Notes                       4 non-null object
     Object                      538 non-null object
@@ -829,14 +752,15 @@ rev.sort_index(axis=1).info()
     Transcription               159 non-null object
     Usage Rights                538 non-null object
     filename                    538 non-null object
-    dtypes: int64(2), object(25)
-    memory usage: 113.6+ KB
-    
+    dtypes: int64(2), object(24)
+    memory usage: 109.4+ KB
+
 
 #### Other ways to view and select data
 
-The head() and tail() methods can be applied to series as well as the whole dataframe. 
+The head() and tail() methods can also be applied to series as well as the whole dataframe. 
 
+Use the head method to list the first twelve values in the Title field in our dataframe. 
 
 
 
@@ -865,11 +789,51 @@ rev.Title.head(12)
 
 
 
+**Chaining methods**
+
+You can chain methods together to apply another method to an object that has a method applied. 
+
+For example, we can use the sort_values method to sort the Title series reverse-alphabetically (via the 'ascending' parameter set to false), then apply the head() method to view th first 12 values. 
+
+
+
+```python
+# View the first 12 values in the 'Title' series sorted alphabetically
+
+rev.Title.sort_values(ascending=False).head(12)
+```
+
+
+
+
+    421                     [Duplicate: Folder 0007-Fashion]
+    444                     [Duplicate: Folder 0007 Fashion]
+    426                     [Duplicate- Folder 0007 Fashion]
+    319           Zoomed out view of Maĭdan Nezalez︠h︡nosti
+    322                             Zbigniew Bujak at Maidan
+    295                   Zbigniew Bujak and his colleagues.
+    28                                        Zbigniew Bujak
+    356                   Yushchenko supporters with trident
+    250            Yushchenko supporters showing peace signs
+    8      Yushchenko supporters rallying on Vokzal'na Sq...
+    506      Yushchenko supporters mingling behind barricade
+    511                 Yushchenko supporter in front of bus
+    Name: Title, dtype: object
+
+
+
+**Specifying rows and columns**
+
+The .loc method allows for selecting individual and multiple rows and columns. Below we'll focus on the ``'Title','Date', 'Usage Rights', and 'filename'`` columns, including all rows of the dataframe. 
+
+We will use the tail() method to view the last n rows in these columns. 
+
+
 
 ```python
 # specify multiple rows and columns by label with loc method 
 
-rev.loc[:,['Title','Date', 'Usage Rights', 'filename']].tail(12)
+rev.loc[:,['Title','Date', 'Usage Rights', 'filename']].tail(8)
 ```
 
 
@@ -901,84 +865,56 @@ rev.loc[:,['Title','Date', 'Usage Rights', 'filename']].tail(12)
   </thead>
   <tbody>
     <tr>
-      <th>526</th>
-      <td>Women in the Orange Revolution</td>
-      <td>10 December 2004</td>
-      <td>For copyright information or permissions quest...</td>
-      <td>60001_df0009_17.tif</td>
-    </tr>
-    <tr>
-      <th>527</th>
-      <td>Signing a Yushchenko poster</td>
-      <td>4 December 2004</td>
-      <td>For copyright information or permissions quest...</td>
-      <td>60001_df0001_091.tif</td>
-    </tr>
-    <tr>
-      <th>528</th>
-      <td>Protesters mingling on Vokzal'na Street</td>
-      <td>27 November 2004</td>
-      <td>For copyright information or permissions quest...</td>
-      <td>60001_df0001_002.tif</td>
-    </tr>
-    <tr>
-      <th>529</th>
-      <td>Young protestor</td>
-      <td>10 December 2004</td>
-      <td>For copyright information or permissions quest...</td>
-      <td>60001_df0007_081.tif</td>
-    </tr>
-    <tr>
-      <th>530</th>
+      <td>530</td>
       <td>NaN</td>
       <td>29 November 2004</td>
       <td>For copyright information or permissions quest...</td>
       <td>60001_df0005_023.tif</td>
     </tr>
     <tr>
-      <th>531</th>
+      <td>531</td>
       <td>Maidan crowds</td>
       <td>29 November 2004</td>
       <td>For copyright information or permissions quest...</td>
       <td>60001_df0007_023.tif</td>
     </tr>
     <tr>
-      <th>532</th>
+      <td>532</td>
       <td>Flags over Maidan</td>
       <td>27 November 2004</td>
       <td>For copyright information or permissions quest...</td>
       <td>60001_df0001_012.tif</td>
     </tr>
     <tr>
-      <th>533</th>
+      <td>533</td>
       <td>NaN</td>
       <td>30 November 2004</td>
       <td>For copyright information or permissions quest...</td>
       <td>60001_df0005_050.tif</td>
     </tr>
     <tr>
-      <th>534</th>
+      <td>534</td>
       <td>Women in the Orange Revolution</td>
       <td>29 November 2004</td>
       <td>For copyright information or permissions quest...</td>
       <td>60001_df0009_11.tif</td>
     </tr>
     <tr>
-      <th>535</th>
+      <td>535</td>
       <td>Young protesters</td>
       <td>27 November 2004</td>
       <td>For copyright information or permissions quest...</td>
       <td>60001_df0003_021.tif</td>
     </tr>
     <tr>
-      <th>536</th>
+      <td>536</td>
       <td>Protestor Vehicles</td>
       <td>10 December 2004</td>
       <td>For copyright information or permissions quest...</td>
       <td>60001_df0007_092.tif</td>
     </tr>
     <tr>
-      <th>537</th>
+      <td>537</td>
       <td>NaN</td>
       <td>10 December 2004</td>
       <td>For copyright information or permissions quest...</td>
@@ -990,8 +926,17 @@ rev.loc[:,['Title','Date', 'Usage Rights', 'filename']].tail(12)
 
 
 
+#### Working with dates 
+
+Notice the format of the values in the 'Date' column above. Also, remember from the info() output that the datatype for 'Date' is currently 'object'. Right now python is viewing these dates as just strings, which limits what we can do with them. 
+
+We can create a new column in the dataframe, using the `to_datetime` method to convert the 'Date' values to datatype 'datetime', which then has a lot of capabilities available to it. 
+
+
 
 ```python
+# check the current datatype and values information for the `Date` column in the rev dataframe
+
 rev.Date.describe()
 ```
 
@@ -1006,13 +951,11 @@ rev.Date.describe()
 
 
 
-#### Working with dates 
-
-the to_datetime method 
-
-
 
 ```python
+# Create a new column 'datesformat', with the values from the Date column 
+# Use to_datetime to convert the 'Date' values to the datetime datatype
+
 rev['datesformat']=pd.to_datetime(rev['Date'])
 
 rev.datesformat.head()
@@ -1032,6 +975,8 @@ rev.datesformat.head()
 
 
 ```python
+# check the current datatype and values information for the new `datesformat` column in the rev dataframe
+
 rev.datesformat.describe()
 
 ```
@@ -1049,14 +994,21 @@ rev.datesformat.describe()
 
 
 
+**Inspect the dataframe with new column added**
+
+Note that the new column will be added at the end of the dataframe. 
+
+
 
 ```python
+# check the columns and dtypes in the rev dataframe
+
 rev.info()
 ```
 
     <class 'pandas.core.frame.DataFrame'>
     RangeIndex: 538 entries, 0 to 537
-    Data columns (total 28 columns):
+    Data columns (total 27 columns):
     Title                       505 non-null object
     Description                 504 non-null object
     Transcription               159 non-null object
@@ -1073,7 +1025,6 @@ rev.info()
     Location in Collection      538 non-null object
     Object                      538 non-null object
     Container type              538 non-null object
-    HookID                      538 non-null object
     filename                    538 non-null object
     Creation Date               538 non-null int64
     Date                        538 non-null object
@@ -1085,9 +1036,16 @@ rev.info()
     Date created                538 non-null object
     Date modified               538 non-null object
     datesformat                 538 non-null datetime64[ns]
-    dtypes: datetime64[ns](1), int64(2), object(25)
-    memory usage: 117.8+ KB
-    
+    dtypes: datetime64[ns](1), int64(2), object(24)
+    memory usage: 113.6+ KB
+
+
+**Apply the same columns to the maps dataframe**
+
+Meanwhile, our maps dataframe is still available in working memory. 
+
+Because the same column labels exist in the maps dataset, we can select out these columns from maps using .loc, the same way as we did with rev above.  
+
 
 
 ```python
@@ -1126,56 +1084,56 @@ maps.loc[:,['Title','Date', 'Usage Rights', 'filename']].tail(8)
   </thead>
   <tbody>
     <tr>
-      <th>153</th>
+      <td>153</td>
       <td>Part of Spotslyvania county</td>
       <td>undated</td>
       <td>NaN</td>
       <td>276_271_E.tif</td>
     </tr>
     <tr>
-      <th>154</th>
+      <td>154</td>
       <td>Area around Culpepper courthouse, bounded sout...</td>
       <td>undated</td>
       <td>NaN</td>
       <td>276_272_E.tif</td>
     </tr>
     <tr>
-      <th>155</th>
+      <td>155</td>
       <td>Area around Falmouth east to Potomac river</td>
       <td>undated</td>
       <td>NaN</td>
       <td>276_273_E.tif</td>
     </tr>
     <tr>
-      <th>156</th>
+      <td>156</td>
       <td>Map of parts of Orange, Spotsylvania, Caroline...</td>
       <td>undated</td>
       <td>NaN</td>
       <td>276_274_E.tif</td>
     </tr>
     <tr>
-      <th>157</th>
+      <td>157</td>
       <td>Military map of the country in the occupation ...</td>
       <td>undated</td>
       <td>NaN</td>
       <td>276_275_E.tif</td>
     </tr>
     <tr>
-      <th>158</th>
+      <td>158</td>
       <td>Map of the Rappahannock River from Fredericksb...</td>
       <td>undated</td>
       <td>NaN</td>
       <td>276_276_E.tif</td>
     </tr>
     <tr>
-      <th>159</th>
+      <td>159</td>
       <td>Incomplete and unidentified sketch of area in ...</td>
       <td>undated</td>
       <td>NaN</td>
       <td>276_330_E.tif</td>
     </tr>
     <tr>
-      <th>160</th>
+      <td>160</td>
       <td>Pleasant Hill</td>
       <td>1864</td>
       <td>NaN</td>
@@ -1187,7 +1145,7 @@ maps.loc[:,['Title','Date', 'Usage Rights', 'filename']].tail(8)
 
 
 
-### Recap of metadata example 1
+### Recap of Metadata Example 1
 
 this example covered the following: 
 
@@ -1195,13 +1153,174 @@ this example covered the following:
 * explore a dataframe as a whole, series within a dataframe, values in rows and columns
 * filter datasets by sorting, selecting, and dropping columns
 * work with multiple dataframes at once
+* create a new column in a dataframe 
 * format dates by converting column datatype with to_datetime
 
 
 
 
-## Example 2: Compare a group of metadata files <a name="md2"></a>
+### Exercise 3: nameofexercise <a name="ex3"></a>
 
+
+Try out some of the methods demonstrated above, with an example datasheet in this repository. 
+
+Use the standard `df` variable name to create a dataframe from the '60001.txt' file.   
+
+Note that this metadata file is not a csv, so you will need to specify the delimiter. 
+
+The syntax for this is:
+```
+df=pd.read_csv('./exampleData/03883.txt', sep='\t')
+
+```
+
+
+
+
+```python
+df=pd.read_csv('./exampleData/03883.txt', sep='\t')
+```
+
+View the shape and column labels of the dataframe. Then inspect the Title column, sorted alphabetically. 
+
+
+```
+df.shape  
+```
+```
+df.info()  
+```
+```
+df.Title.sort_values().head(12)  
+
+```
+
+
+```python
+df.shape
+```
+
+
+
+
+    (899, 64)
+
+
+
+
+```python
+df.info()
+```
+
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 899 entries, 0 to 898
+    Data columns (total 64 columns):
+    Collection in Repository                   899 non-null object
+    Collection Number                          899 non-null int64
+    Location in Collection                     899 non-null object
+    Object                                     899 non-null object
+    Container Type                             899 non-null object
+    filename                                   899 non-null object
+    Title                                      0 non-null float64
+    Alternative Title                          0 non-null float64
+    Creator                                    0 non-null float64
+    Contributor                                0 non-null float64
+    Creation Date                              0 non-null float64
+    Date                                       0 non-null float64
+    Description                                0 non-null float64
+    Subject (tgm)                              0 non-null float64
+    Subject Name                               0 non-null float64
+    Subject Topical                            0 non-null float64
+    Subject Geographic                         0 non-null float64
+    Subject Topical Other                      0 non-null float64
+    Coordinates                                0 non-null float64
+    geonamesid                                 0 non-null float64
+    Digital Collection                         0 non-null float64
+    Repository                                 0 non-null float64
+    Host                                       0 non-null float64
+    Usage Rights                               899 non-null object
+    Copyright Holder                           0 non-null float64
+    Additional Display                         0 non-null float64
+    Transcription                              0 non-null float64
+    Caption                                    0 non-null float64
+    Notes                                      0 non-null float64
+    Title Note                                 0 non-null float64
+    Contributor Note                           0 non-null float64
+    Sponsor                                    0 non-null float64
+    Related Resource                           0 non-null float64
+    Author Chief Source                        0 non-null float64
+    Publisher                                  0 non-null float64
+    Place of Publication                       0 non-null float64
+    Cataloging Agency                          0 non-null float64
+    Is Part Of                                 0 non-null float64
+    Has Part Of                                0 non-null float64
+    Form                                       0 non-null float64
+    Resource Type                              0 non-null float64
+    Medium                                     0 non-null float64
+    Condition                                  0 non-null float64
+    Language                                   0 non-null float64
+    Physical Description of Analog Original    0 non-null float64
+    Creator Nationality/Culture                0 non-null float64
+    Style/Period                               0 non-null float64
+    Volume/Issue                               0 non-null float64
+    Scale                                      0 non-null float64
+    Projection                                 0 non-null float64
+    Map Type                                   0 non-null float64
+    Map Details                                0 non-null float64
+    Current Location                           0 non-null float64
+    path                                       0 non-null float64
+    Local Identifier                           0 non-null float64
+    Creator Identifier                         0 non-null float64
+    Search by Decade                           0 non-null float64
+    Pagination                                 0 non-null float64
+    Sort Me                                    0 non-null float64
+    StreamingFile                              0 non-null float64
+    duracloudSpace                             0 non-null float64
+    OCLC number                                0 non-null float64
+    Date created                               899 non-null object
+    Date modified                              899 non-null object
+    dtypes: float64(55), int64(1), object(8)
+    memory usage: 449.6+ KB
+
+
+
+```python
+df.Title.sort_values().head(12)  
+```
+
+
+
+
+    0    NaN
+    1    NaN
+    2    NaN
+    3    NaN
+    4    NaN
+    5    NaN
+    6    NaN
+    7    NaN
+    8    NaN
+    9    NaN
+    10   NaN
+    11   NaN
+    Name: Title, dtype: float64
+
+
+
+###  Solution to Exercise 3: nameofexercise
+
+
+```python
+
+```
+
+## Metadata Example 2: Compare a group of metadata files <a name="md2"></a>
+
+This example continues where Example 1 left off. Having identified a set of fields to analyze in our group of collections, we will create new dataframes from the raw datasheets. This time we will include only the set of relevant columns from a group of collections. 
+
+We will then concatenate the new dataframes into a single compiled dataset that makes it easy to compare completeness of metadata across the group as a whole. 
+
+We will generate basic graphs to show comparisons between the collections. 
 
 
 
@@ -1216,7 +1335,7 @@ coltitles=['Title','Date','Usage Rights', 'Subject Geographic', 'Subject Name' ,
 # read in the same datasheets from the last example
 # create a new column in each dataframe that contain a short Collection Name value
 
-maps=pd.read_csv("./exampleData/maps_date.csv", usecols=coltitles)
+maps=pd.read_csv("./exampleData/maps.csv", usecols=coltitles)
 maps['colname'] ='Civil War Maps'
 
 rev=pd.read_csv("./exampleData/60001.txt", usecols=coltitles, sep='\t')
@@ -1278,8 +1397,8 @@ rmb.sort_index(axis=1).info()
     Usage Rights          899 non-null object
     colname               899 non-null object
     dtypes: float64(5), object(2)
-    memory usage: 49.2+ KB
-    
+    memory usage: 49.3+ KB
+
 
 
 ```python
@@ -1317,7 +1436,7 @@ collstack.info()
     colname               1598 non-null object
     dtypes: object(7)
     memory usage: 99.9+ KB
-    
+
 
 
 ```python
@@ -1356,17 +1475,17 @@ collstack.groupby('colname')['Title', 'Usage Rights'].count()
   </thead>
   <tbody>
     <tr>
-      <th>Civil War Maps</th>
+      <td>Civil War Maps</td>
       <td>161</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>Revolution Photographs</th>
+      <td>Revolution Photographs</td>
       <td>505</td>
       <td>538</td>
     </tr>
     <tr>
-      <th>Roy M Brown Papers</th>
+      <td>Roy M Brown Papers</td>
       <td>0</td>
       <td>899</td>
     </tr>
@@ -1391,7 +1510,7 @@ plt.xlabel('')
 
 
 
-![png](output_57_1.png)
+![png](output_77_1.png)
 
 
 
@@ -1435,21 +1554,21 @@ collstack.groupby('colname')['Title', 'Subject Geographic', 'Subject Name', 'Sub
   </thead>
   <tbody>
     <tr>
-      <th>Civil War Maps</th>
+      <td>Civil War Maps</td>
       <td>161</td>
       <td>161</td>
       <td>161</td>
       <td>161</td>
     </tr>
     <tr>
-      <th>Revolution Photographs</th>
+      <td>Revolution Photographs</td>
       <td>505</td>
       <td>538</td>
       <td>15</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>Roy M Brown Papers</th>
+      <td>Roy M Brown Papers</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1469,12 +1588,12 @@ collstack.groupby('colname')['Title', 'Subject Geographic', 'Subject Name', 'Sub
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x1d936731048>
+    <matplotlib.axes._subplots.AxesSubplot at 0x7f0c1881e438>
 
 
 
 
-![png](output_59_1.png)
+![png](output_79_1.png)
 
 
 
@@ -1485,12 +1604,12 @@ maps.groupby(['Subject Name']).Title.count().sort_values(ascending=False).plot(k
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x1d9344631d0>
+    <matplotlib.axes._subplots.AxesSubplot at 0x7f0c187938d0>
 
 
 
 
-![png](output_60_1.png)
+![png](output_80_1.png)
 
 
 
@@ -1501,12 +1620,12 @@ maps.groupby(['Subject Name']).Title.count().sort_values(ascending=False).head()
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x1d93589e518>
+    <matplotlib.axes._subplots.AxesSubplot at 0x7f0c1868ea90>
 
 
 
 
-![png](output_61_1.png)
+![png](output_81_1.png)
 
 
 
@@ -1524,7 +1643,7 @@ plt.ylabel('')
 
 
 
-![png](output_62_1.png)
+![png](output_82_1.png)
 
 
 
@@ -1571,7 +1690,7 @@ plt.ylabel('')
 
 
 
-![png](output_64_1.png)
+![png](output_84_1.png)
 
 
 ### Recap of Example 2 
@@ -1583,7 +1702,7 @@ plt.ylabel('')
 * explore different graph formats to represent data attributes
 
 
-### Exercise 3: Evaluate Subjects data in a collection<a name="ex3"></a>
+### Exercise 4: Evaluate Subjects data in a collection<a name="ex4"></a>
 
 
 In this exercise, you will evaluate data in the 'Subject Topical' field in the Maps collection. 
@@ -1624,7 +1743,7 @@ For reference, the solution is demonstrated in the next cells below.
 
 ```
 
-### Solution to Exercise 3
+### Solution to Exercise 4: Evaluate Subjects data in a collection
 
 
 ```python
@@ -1662,7 +1781,7 @@ plt.xlabel('item count')
 
 
 
-![png](output_72_1.png)
+![png](output_92_1.png)
 
 
 
@@ -1670,21 +1789,22 @@ plt.xlabel('item count')
 
 ```
 
-## Example 3: Merge information from separate files <a name="md3"></a>
+## Metadata Example 3: Merge information from separate files <a name="md3"></a>
 
 Another useful feature of pandas is that it allows you to do SQL-like joins with plain text files.  
 
-In this exercise, we will create a merged dataframe from descriptive metadata and file sizes information in separate datasets. 
+In this exercise, we will create a merged dataframe from descriptive metadata and file sizes information in separate datasets. We will rename columns in the descriptive metadata dataframe to merge based on columns in our filesizes datasheets. (It's also possible to specify the columns to merge separately for the left and right dataframes if they are not named the same!)  
 
-The exercise also includes more basic functions for reshaping dataframes:
-* The first dataset has a large number of columns, some of which have no data, so we will remove the empty columns
+**Learning objectives for this example:**
+* Review removing empty columns - the first dataset has a large number of columns, some of which have no data
 * Datatypes can be complicated and lead to potential errors; you may need to specify datatypes for columns
-* We will rename one of the columns in the descriptive metadata dataframe to merge based on this column. (It's also possible to specify the columns to merge separately for the left and right dataframes if they are not named the same!)
+* Renaming columns 
+* Merging dataframes 
 * Write a dataframe to a csv output file or other format 
 
 
 
-
+markdown
 
 
 ```python
@@ -1711,9 +1831,9 @@ print(metadata.shape)
 ```
 
     (5777, 60)
-    
 
 
+markdown
 
 
 ```python
@@ -1787,7 +1907,7 @@ metadata.info()
     Object file name                           5777 non-null object
     dtypes: float64(49), int64(2), object(9)
     memory usage: 2.6+ MB
-    
+
 
 markdown
 
@@ -1817,8 +1937,8 @@ metadata.info()
     Object number               5777 non-null int64
     Object file name            5777 non-null object
     dtypes: int64(2), object(9)
-    memory usage: 496.5+ KB
-    
+    memory usage: 496.6+ KB
+
 
 markdown
 
@@ -1877,7 +1997,7 @@ markdown
 
 
 ```python
-#Use the head method to see the first n values of a column
+#Use the head method to see the first n rows
 
 metadata.head()
 ```
@@ -1918,7 +2038,7 @@ metadata.head()
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>North Carolina Commission on Interracial Coope...</td>
       <td>03823</td>
       <td>Series 1. Correspondence, 1922-1949. / Subseri...</td>
@@ -1932,7 +2052,7 @@ metadata.head()
       <td>231.jp2</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>North Carolina Commission on Interracial Coope...</td>
       <td>03823</td>
       <td>Series 1. Correspondence, 1922-1949. / Subseri...</td>
@@ -1946,7 +2066,7 @@ metadata.head()
       <td>430.jp2</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>North Carolina Commission on Interracial Coope...</td>
       <td>03823</td>
       <td>Series 1. Correspondence, 1922-1949. / Subseri...</td>
@@ -1960,7 +2080,7 @@ metadata.head()
       <td>909.jp2</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>North Carolina Commission on Interracial Coope...</td>
       <td>03823</td>
       <td>Series 1. Correspondence, 1922-1949. / Subseri...</td>
@@ -1974,7 +2094,7 @@ metadata.head()
       <td>59.jp2</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>North Carolina Commission on Interracial Coope...</td>
       <td>03823</td>
       <td>Series 1. Correspondence, 1922-1949. / Subseri...</td>
@@ -2018,7 +2138,7 @@ sizelist.info()
     Extension               11554 non-null object
     dtypes: int64(2), object(4)
     memory usage: 541.7+ KB
-    
+
 
 
 ```python
@@ -2048,7 +2168,7 @@ sizelist.info()
     AccessFileSize    11554 non-null object
     dtypes: object(3)
     memory usage: 270.9+ KB
-    
+
 
 markdown
 
@@ -2087,31 +2207,31 @@ sizelist.head()
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>1.jp2</td>
       <td>Content/03823/image/1.jp2</td>
       <td>7207888 Bytes</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>2.jp2</td>
       <td>Content/03823/image/2.jp2</td>
       <td>5707680 Bytes</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>3.jp2</td>
       <td>Content/03823/image/3.jp2</td>
       <td>1364563 Bytes</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>4.jp2</td>
       <td>Content/03823/image/4.jp2</td>
       <td>9339767 Bytes</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>5.jp2</td>
       <td>Content/03823/image/5.jp2</td>
       <td>9021190 Bytes</td>
@@ -2124,7 +2244,7 @@ sizelist.head()
 
 markdown
 
-
+markdown
 
 
 ```python
@@ -2145,7 +2265,7 @@ metadata.columns
 
 
 
-
+markdown
 
 
 ```python
@@ -2175,7 +2295,7 @@ combined.info()
     AccessFileSize              5777 non-null object
     dtypes: int64(1), object(12)
     memory usage: 631.9+ KB
-    
+
 
 
 ```python
@@ -2226,14 +2346,14 @@ combined.info()
     AccessSizeNum               5777 non-null int64
     dtypes: int64(2), object(12)
     memory usage: 677.0+ KB
-    
+
 
 
 ```python
 
 ```
 
-
+markdown
 
 
 ```python
@@ -2242,7 +2362,7 @@ combined.info()
 combined.to_csv('./output/accessfilesizes_metadata_03823.csv', index=False,encoding='utf-8-sig')
 ```
 
-
+markdown
 
 
 ```python
@@ -2272,7 +2392,7 @@ masters.info()
     MasterSizeNum     6044 non-null int64
     dtypes: int64(1), object(3)
     memory usage: 189.0+ KB
-    
+
 
 
 ```python
@@ -2308,35 +2428,35 @@ masters.tail()
   </thead>
   <tbody>
     <tr>
-      <th>6039</th>
+      <td>6039</td>
       <td>03823_0046_0005.tif</td>
       <td>bucket\03823_nccic\03823_0046\03823_0046_0005.tif</td>
       <td>10136638 Bytes</td>
       <td>10136638</td>
     </tr>
     <tr>
-      <th>6040</th>
+      <td>6040</td>
       <td>03823_0046_0006.tif</td>
       <td>bucket\03823_nccic\03823_0046\03823_0046_0006.tif</td>
       <td>9620175 Bytes</td>
       <td>9620175</td>
     </tr>
     <tr>
-      <th>6041</th>
+      <td>6041</td>
       <td>03823_0046_0007.tif</td>
       <td>bucket\03823_nccic\03823_0046\03823_0046_0007.tif</td>
       <td>9280681 Bytes</td>
       <td>9280681</td>
     </tr>
     <tr>
-      <th>6042</th>
+      <td>6042</td>
       <td>03823_0046_0008.tif</td>
       <td>bucket\03823_nccic\03823_0046\03823_0046_0008.tif</td>
       <td>8937930 Bytes</td>
       <td>8937930</td>
     </tr>
     <tr>
-      <th>6043</th>
+      <td>6043</td>
       <td>03823_0046_0009.tif</td>
       <td>bucket\03823_nccic\03823_0046\03823_0046_0009.tif</td>
       <td>8409261 Bytes</td>
@@ -2392,7 +2512,7 @@ combined.head()
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>North Carolina Commission on Interracial Coope...</td>
       <td>03823</td>
       <td>Series 1. Correspondence, 1922-1949. / Subseri...</td>
@@ -2409,7 +2529,7 @@ combined.head()
       <td>8524803</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>North Carolina Commission on Interracial Coope...</td>
       <td>03823</td>
       <td>Series 1. Correspondence, 1922-1949. / Subseri...</td>
@@ -2426,7 +2546,7 @@ combined.head()
       <td>10099338</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>North Carolina Commission on Interracial Coope...</td>
       <td>03823</td>
       <td>Series 1. Correspondence, 1922-1949. / Subseri...</td>
@@ -2443,7 +2563,7 @@ combined.head()
       <td>5920711</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>North Carolina Commission on Interracial Coope...</td>
       <td>03823</td>
       <td>Series 1. Correspondence, 1922-1949. / Subseri...</td>
@@ -2460,7 +2580,7 @@ combined.head()
       <td>5291542</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>North Carolina Commission on Interracial Coope...</td>
       <td>03823</td>
       <td>Series 1. Correspondence, 1922-1949. / Subseri...</td>
@@ -2508,7 +2628,7 @@ combined.info()
     AccessSizeNum               5777 non-null int64
     dtypes: int64(2), object(12)
     memory usage: 677.0+ KB
-    
+
 
 
 ```python
@@ -2539,7 +2659,7 @@ all3.info()
     MasterSizeNum               5777 non-null int64
     dtypes: int64(3), object(14)
     memory usage: 812.4+ KB
-    
+
 
 
 ```python
@@ -2578,7 +2698,7 @@ all3.loc[:,['Collection Number','Object', 'MastersName', 'AccessName', 'AccessSi
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>03823</td>
       <td>Folder 20: Correspondence, 1947-1948: Scan 9</td>
       <td>03823_0020_0009.tif</td>
@@ -2587,7 +2707,7 @@ all3.loc[:,['Collection Number','Object', 'MastersName', 'AccessName', 'AccessSi
       <td>23654901</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>03823</td>
       <td>Folder 21: Correspondence, 1947-1948: Scan 17</td>
       <td>03823_0021_0017.tif</td>
@@ -2596,7 +2716,7 @@ all3.loc[:,['Collection Number','Object', 'MastersName', 'AccessName', 'AccessSi
       <td>20547567</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>03823</td>
       <td>Folder 9: Correspondence, 1943: Scan 1</td>
       <td>03823_0009_0001.tif</td>
@@ -2605,7 +2725,7 @@ all3.loc[:,['Collection Number','Object', 'MastersName', 'AccessName', 'AccessSi
       <td>20210038</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>03823</td>
       <td>Folder 17: Correspondence, 1947-1948: Scan 16</td>
       <td>03823_0017_0016.tif</td>
@@ -2614,7 +2734,7 @@ all3.loc[:,['Collection Number','Object', 'MastersName', 'AccessName', 'AccessSi
       <td>19359544</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>03823</td>
       <td>Folder 12: Correspondence, 1944-May 1946: Scan 44</td>
       <td>03823_0012_0044.tif</td>
@@ -2623,7 +2743,7 @@ all3.loc[:,['Collection Number','Object', 'MastersName', 'AccessName', 'AccessSi
       <td>4526254</td>
     </tr>
     <tr>
-      <th>5</th>
+      <td>5</td>
       <td>03823</td>
       <td>Folder 16: Correspondence, 1947-1948: Scan 15</td>
       <td>03823_0016_0015.tif</td>
@@ -2632,7 +2752,7 @@ all3.loc[:,['Collection Number','Object', 'MastersName', 'AccessName', 'AccessSi
       <td>22851671</td>
     </tr>
     <tr>
-      <th>6</th>
+      <td>6</td>
       <td>03823</td>
       <td>Folder 9: Correspondence, 1943: Scan 15</td>
       <td>03823_0009_0015.tif</td>
@@ -2641,7 +2761,7 @@ all3.loc[:,['Collection Number','Object', 'MastersName', 'AccessName', 'AccessSi
       <td>18935044</td>
     </tr>
     <tr>
-      <th>7</th>
+      <td>7</td>
       <td>03823</td>
       <td>Folder 19: Correspondence, 1947-1948: Scan 12</td>
       <td>03823_0019_0012.tif</td>
@@ -2650,7 +2770,7 @@ all3.loc[:,['Collection Number','Object', 'MastersName', 'AccessName', 'AccessSi
       <td>25278344</td>
     </tr>
     <tr>
-      <th>8</th>
+      <td>8</td>
       <td>03823</td>
       <td>Folder 13: Correspondence, August-December 194...</td>
       <td>03823_0013_0006.tif</td>
@@ -2659,7 +2779,7 @@ all3.loc[:,['Collection Number','Object', 'MastersName', 'AccessName', 'AccessSi
       <td>18302170</td>
     </tr>
     <tr>
-      <th>9</th>
+      <td>9</td>
       <td>03823</td>
       <td>Folder 7: Correspondence, 1942: Scan 34</td>
       <td>03823_0007_0034.tif</td>
@@ -2668,7 +2788,7 @@ all3.loc[:,['Collection Number','Object', 'MastersName', 'AccessName', 'AccessSi
       <td>19838143</td>
     </tr>
     <tr>
-      <th>10</th>
+      <td>10</td>
       <td>03823</td>
       <td>Folder 7: Correspondence, 1942: Scan 32</td>
       <td>03823_0007_0032.tif</td>
@@ -2677,7 +2797,7 @@ all3.loc[:,['Collection Number','Object', 'MastersName', 'AccessName', 'AccessSi
       <td>20964250</td>
     </tr>
     <tr>
-      <th>11</th>
+      <td>11</td>
       <td>03823</td>
       <td>Folder 18: Correspondence, 1947-1948: Scan 37</td>
       <td>03823_0018_0037.tif</td>
@@ -2732,31 +2852,31 @@ sizelist.tail()
   </thead>
   <tbody>
     <tr>
-      <th>11549</th>
+      <td>11549</td>
       <td>icon5773.jpg</td>
       <td>Content/03823/image/icon5773.jpg</td>
       <td>2217 Bytes</td>
     </tr>
     <tr>
-      <th>11550</th>
+      <td>11550</td>
       <td>icon5774.jpg</td>
       <td>Content/03823/image/icon5774.jpg</td>
       <td>2706 Bytes</td>
     </tr>
     <tr>
-      <th>11551</th>
+      <td>11551</td>
       <td>icon5775.jpg</td>
       <td>Content/03823/image/icon5775.jpg</td>
       <td>2648 Bytes</td>
     </tr>
     <tr>
-      <th>11552</th>
+      <td>11552</td>
       <td>icon5776.jpg</td>
       <td>Content/03823/image/icon5776.jpg</td>
       <td>2895 Bytes</td>
     </tr>
     <tr>
-      <th>11553</th>
+      <td>11553</td>
       <td>icon5777.jpg</td>
       <td>Content/03823/image/icon5777.jpg</td>
       <td>3057 Bytes</td>
@@ -2786,10 +2906,7 @@ sizelist['AccessName'].str.count("icon").sum()
 
 ```
 
-
-```python
-
-```
+###  Solution to Exercise 5: Other ways to merge
 
 
 ```python
@@ -2801,19 +2918,19 @@ sizelist['AccessName'].str.count("icon").sum()
 
 ```
 
-## Bonus Example: Find and remove duplicates <a name="md4"></a>
+## Bonus Metadata Example: Find and remove duplicates <a name="md4"></a>
 
 
 
 
-
+markdown
 
 
 ```python
 coll=pd.read_csv('./exampleData/coll_dupes_example.csv')
 ```
 
-
+markdown
 
 
 ```python
@@ -2842,14 +2959,14 @@ coll.info()
     Date modified             39156 non-null object
     dtypes: float64(3), object(14)
     memory usage: 5.1+ MB
-    
+
 
 
 ```python
 coll=pd.read_csv('./exampleData/coll_dupes_example.csv', usecols=['Collection Number','Object', 'filename', 'Date created', 'Date modified'])
 ```
 
-
+markdown
 
 
 ```python
@@ -2866,7 +2983,7 @@ coll.info()
     Date modified        39156 non-null object
     dtypes: object(5)
     memory usage: 1.5+ MB
-    
+
 
 
 ```python
@@ -2983,7 +3100,7 @@ dupes_all.sort_values(['Collection Number','Object'])
   </thead>
   <tbody>
     <tr>
-      <th>29280</th>
+      <td>29280</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0098: Steam engine 4501, Mi...</td>
       <td>P0032_2_0098_0001.tif</td>
@@ -2991,7 +3108,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-04-19</td>
     </tr>
     <tr>
-      <th>29281</th>
+      <td>29281</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0098: Steam engine 4501, Mi...</td>
       <td>P0032_2_0098_0001.tif</td>
@@ -2999,7 +3116,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29303</th>
+      <td>29303</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0123: Mikado type steam eng...</td>
       <td>P0032_2_0123_0001.tif</td>
@@ -3007,7 +3124,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-04-19</td>
     </tr>
     <tr>
-      <th>29304</th>
+      <td>29304</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0123: Mikado type steam eng...</td>
       <td>P0032_2_0123_0001.tif</td>
@@ -3015,7 +3132,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29315</th>
+      <td>29315</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0134: Green and gold-trimme...</td>
       <td>P0032_2_0134_0001.tif</td>
@@ -3023,7 +3140,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-04-19</td>
     </tr>
     <tr>
-      <th>29316</th>
+      <td>29316</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0134: Green and gold-trimme...</td>
       <td>P0032_2_0134_0001.tif</td>
@@ -3031,7 +3148,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29385</th>
+      <td>29385</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0207_0001.tif</td>
@@ -3039,7 +3156,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29386</th>
+      <td>29386</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0213_0001.tif</td>
@@ -3047,7 +3164,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29387</th>
+      <td>29387</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0218_0001.tif</td>
@@ -3055,7 +3172,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29388</th>
+      <td>29388</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0223_0001.tif</td>
@@ -3063,7 +3180,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29389</th>
+      <td>29389</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0217_0001.tif</td>
@@ -3071,7 +3188,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29390</th>
+      <td>29390</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0225_0001.tif</td>
@@ -3079,7 +3196,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29391</th>
+      <td>29391</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0229_0001.tif</td>
@@ -3087,7 +3204,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29392</th>
+      <td>29392</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0219_0001.tif</td>
@@ -3095,7 +3212,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29393</th>
+      <td>29393</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0227_0001.tif</td>
@@ -3103,7 +3220,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29394</th>
+      <td>29394</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0210_0001.tif</td>
@@ -3111,7 +3228,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29395</th>
+      <td>29395</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0221_0001.tif</td>
@@ -3119,7 +3236,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29396</th>
+      <td>29396</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0224_0001.tif</td>
@@ -3127,7 +3244,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29397</th>
+      <td>29397</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0226_0001.tif</td>
@@ -3135,7 +3252,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29398</th>
+      <td>29398</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0216_0001.tif</td>
@@ -3143,7 +3260,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29399</th>
+      <td>29399</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0211_0001.tif</td>
@@ -3151,7 +3268,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29400</th>
+      <td>29400</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0212_0001.tif</td>
@@ -3159,7 +3276,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29401</th>
+      <td>29401</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0230_0001.tif</td>
@@ -3167,7 +3284,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29402</th>
+      <td>29402</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0222_0001.tif</td>
@@ -3175,7 +3292,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29403</th>
+      <td>29403</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0215_0001.tif</td>
@@ -3183,7 +3300,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29404</th>
+      <td>29404</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0214_0001.tif</td>
@@ -3191,7 +3308,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29405</th>
+      <td>29405</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0220_0001.tif</td>
@@ -3199,7 +3316,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29406</th>
+      <td>29406</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0209_0001.tif</td>
@@ -3207,7 +3324,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29407</th>
+      <td>29407</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0208_0001.tif</td>
@@ -3215,7 +3332,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29408</th>
+      <td>29408</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0228_0001.tif</td>
@@ -3223,7 +3340,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29990</th>
+      <td>29990</td>
       <td>P0044</td>
       <td>Folder 0044: A Connoisseur (Unidentified man),...</td>
       <td>P0044_0044_0001.tif</td>
@@ -3231,7 +3348,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2014-07-14</td>
     </tr>
     <tr>
-      <th>29991</th>
+      <td>29991</td>
       <td>P0044</td>
       <td>Folder 0044: A Connoisseur (Unidentified man),...</td>
       <td>P0044_0044_0001.tif</td>
@@ -3239,7 +3356,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2016-03-08</td>
     </tr>
     <tr>
-      <th>29992</th>
+      <td>29992</td>
       <td>P0044</td>
       <td>Folder 0044: A Connoisseur (Unidentified man),...</td>
       <td>P0044_0044_0002.tif</td>
@@ -3247,7 +3364,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2014-07-14</td>
     </tr>
     <tr>
-      <th>29993</th>
+      <td>29993</td>
       <td>P0044</td>
       <td>Folder 0044: A Connoisseur (Unidentified man),...</td>
       <td>P0044_0044_0002.tif</td>
@@ -3255,7 +3372,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2016-03-08</td>
     </tr>
     <tr>
-      <th>30050</th>
+      <td>30050</td>
       <td>P0044</td>
       <td>Folder 0088: Innocence (Unidentified girl), 1906</td>
       <td>P0044_0088_0001.tif</td>
@@ -3263,7 +3380,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2013-03-28</td>
     </tr>
     <tr>
-      <th>30051</th>
+      <td>30051</td>
       <td>P0044</td>
       <td>Folder 0088: Innocence (Unidentified girl), 1906</td>
       <td>P0044_0088_0002.tif</td>
@@ -3271,7 +3388,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2013-03-28</td>
     </tr>
     <tr>
-      <th>30139</th>
+      <td>30139</td>
       <td>P0044</td>
       <td>Folder 0151: Virginia</td>
       <td>P0044_0151_A.tif</td>
@@ -3279,7 +3396,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2013-03-28</td>
     </tr>
     <tr>
-      <th>30140</th>
+      <td>30140</td>
       <td>P0044</td>
       <td>Folder 0151: Virginia</td>
       <td>P0044_0151_B.tif</td>
@@ -3287,7 +3404,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2013-03-28</td>
     </tr>
     <tr>
-      <th>30340</th>
+      <td>30340</td>
       <td>P0044</td>
       <td>Folder 0259: Return of the Sheep, circa 1899</td>
       <td>P0044_0259_Large.tif</td>
@@ -3295,7 +3412,7 @@ dupes_all.sort_values(['Collection Number','Object'])
       <td>2013-03-28</td>
     </tr>
     <tr>
-      <th>30341</th>
+      <td>30341</td>
       <td>P0044</td>
       <td>Folder 0259: Return of the Sheep, circa 1899</td>
       <td>P0044_0259_Small.tif</td>
@@ -3357,7 +3474,7 @@ da
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0098: Steam engine 4501, Mi...</td>
       <td>P0032_2_0098_0001.tif</td>
@@ -3365,7 +3482,7 @@ da
       <td>2011-04-19</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0098: Steam engine 4501, Mi...</td>
       <td>P0032_2_0098_0001.tif</td>
@@ -3373,7 +3490,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0123: Mikado type steam eng...</td>
       <td>P0032_2_0123_0001.tif</td>
@@ -3381,7 +3498,7 @@ da
       <td>2011-04-19</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0123: Mikado type steam eng...</td>
       <td>P0032_2_0123_0001.tif</td>
@@ -3389,7 +3506,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0134: Green and gold-trimme...</td>
       <td>P0032_2_0134_0001.tif</td>
@@ -3397,7 +3514,7 @@ da
       <td>2011-04-19</td>
     </tr>
     <tr>
-      <th>5</th>
+      <td>5</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0134: Green and gold-trimme...</td>
       <td>P0032_2_0134_0001.tif</td>
@@ -3405,7 +3522,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>6</th>
+      <td>6</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0207_0001.tif</td>
@@ -3413,7 +3530,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>7</th>
+      <td>7</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0213_0001.tif</td>
@@ -3421,7 +3538,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>8</th>
+      <td>8</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0218_0001.tif</td>
@@ -3429,7 +3546,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>9</th>
+      <td>9</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0223_0001.tif</td>
@@ -3437,7 +3554,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>10</th>
+      <td>10</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0217_0001.tif</td>
@@ -3445,7 +3562,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>11</th>
+      <td>11</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0225_0001.tif</td>
@@ -3453,7 +3570,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>12</th>
+      <td>12</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0229_0001.tif</td>
@@ -3461,7 +3578,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>13</th>
+      <td>13</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0219_0001.tif</td>
@@ -3469,7 +3586,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>14</th>
+      <td>14</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0227_0001.tif</td>
@@ -3477,7 +3594,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>15</th>
+      <td>15</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0210_0001.tif</td>
@@ -3485,7 +3602,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>16</th>
+      <td>16</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0221_0001.tif</td>
@@ -3493,7 +3610,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>17</th>
+      <td>17</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0224_0001.tif</td>
@@ -3501,7 +3618,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>18</th>
+      <td>18</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0226_0001.tif</td>
@@ -3509,7 +3626,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>19</th>
+      <td>19</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0216_0001.tif</td>
@@ -3517,7 +3634,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>20</th>
+      <td>20</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0211_0001.tif</td>
@@ -3525,7 +3642,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>21</th>
+      <td>21</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0212_0001.tif</td>
@@ -3533,7 +3650,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>22</th>
+      <td>22</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0230_0001.tif</td>
@@ -3541,7 +3658,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>23</th>
+      <td>23</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0222_0001.tif</td>
@@ -3549,7 +3666,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>24</th>
+      <td>24</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0215_0001.tif</td>
@@ -3557,7 +3674,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>25</th>
+      <td>25</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0214_0001.tif</td>
@@ -3565,7 +3682,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>26</th>
+      <td>26</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0220_0001.tif</td>
@@ -3573,7 +3690,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>27</th>
+      <td>27</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0209_0001.tif</td>
@@ -3581,7 +3698,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>28</th>
+      <td>28</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0208_0001.tif</td>
@@ -3589,7 +3706,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>29</th>
+      <td>29</td>
       <td>P0032</td>
       <td>Color 35mm Slide 2_0207: A collection of pictu...</td>
       <td>P0032_2_0228_0001.tif</td>
@@ -3597,7 +3714,7 @@ da
       <td>2011-05-12</td>
     </tr>
     <tr>
-      <th>30</th>
+      <td>30</td>
       <td>P0044</td>
       <td>Folder 0044: A Connoisseur (Unidentified man),...</td>
       <td>P0044_0044_0001.tif</td>
@@ -3605,7 +3722,7 @@ da
       <td>2014-07-14</td>
     </tr>
     <tr>
-      <th>31</th>
+      <td>31</td>
       <td>P0044</td>
       <td>Folder 0044: A Connoisseur (Unidentified man),...</td>
       <td>P0044_0044_0001.tif</td>
@@ -3613,7 +3730,7 @@ da
       <td>2016-03-08</td>
     </tr>
     <tr>
-      <th>32</th>
+      <td>32</td>
       <td>P0044</td>
       <td>Folder 0044: A Connoisseur (Unidentified man),...</td>
       <td>P0044_0044_0002.tif</td>
@@ -3621,7 +3738,7 @@ da
       <td>2014-07-14</td>
     </tr>
     <tr>
-      <th>33</th>
+      <td>33</td>
       <td>P0044</td>
       <td>Folder 0044: A Connoisseur (Unidentified man),...</td>
       <td>P0044_0044_0002.tif</td>
@@ -3629,7 +3746,7 @@ da
       <td>2016-03-08</td>
     </tr>
     <tr>
-      <th>34</th>
+      <td>34</td>
       <td>P0044</td>
       <td>Folder 0088: Innocence (Unidentified girl), 1906</td>
       <td>P0044_0088_0001.tif</td>
@@ -3637,7 +3754,7 @@ da
       <td>2013-03-28</td>
     </tr>
     <tr>
-      <th>35</th>
+      <td>35</td>
       <td>P0044</td>
       <td>Folder 0088: Innocence (Unidentified girl), 1906</td>
       <td>P0044_0088_0002.tif</td>
@@ -3645,7 +3762,7 @@ da
       <td>2013-03-28</td>
     </tr>
     <tr>
-      <th>36</th>
+      <td>36</td>
       <td>P0044</td>
       <td>Folder 0151: Virginia</td>
       <td>P0044_0151_A.tif</td>
@@ -3653,7 +3770,7 @@ da
       <td>2013-03-28</td>
     </tr>
     <tr>
-      <th>37</th>
+      <td>37</td>
       <td>P0044</td>
       <td>Folder 0151: Virginia</td>
       <td>P0044_0151_B.tif</td>
@@ -3661,7 +3778,7 @@ da
       <td>2013-03-28</td>
     </tr>
     <tr>
-      <th>38</th>
+      <td>38</td>
       <td>P0044</td>
       <td>Folder 0259: Return of the Sheep, circa 1899</td>
       <td>P0044_0259_Large.tif</td>
@@ -3669,7 +3786,7 @@ da
       <td>2013-03-28</td>
     </tr>
     <tr>
-      <th>39</th>
+      <td>39</td>
       <td>P0044</td>
       <td>Folder 0259: Return of the Sheep, circa 1899</td>
       <td>P0044_0259_Small.tif</td>
@@ -3702,7 +3819,7 @@ da
 
 ```
 
-
+markdown
 
 ## Resources <a name="res"></a>
 

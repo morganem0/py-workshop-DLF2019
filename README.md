@@ -13,9 +13,7 @@ If you have the Jupyter Notebook software installed on your own computer, you ca
 Alternatively, run the notebook in Binder via the link below. Note that Binder can be slow to load -- 2-8 minutes for the notebook to load after opening this URL could happen! 
 
 #### Binder location for Jupyter Notebook from github:  
-Binder location for notebook from github:   
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/morganem0/py-workshop-DLF2019/master)
+Binder location for notebook from github: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/morganem0/py-workshop-DLF2019/master)
 
 ### Workshop Outline
 

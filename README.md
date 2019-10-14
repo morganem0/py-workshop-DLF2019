@@ -36,7 +36,7 @@ We will walk through three brief examples with digital collections metadata file
 * nbviewer.jupyter.org provides a viewer that renders notebook code and markdown as static HTML page.   
 * The static version of the notebook shows all code executed, so you can read the code and see the outputs.  
 
-**View this Jupyter Notebook in nbviewer**: [py_workshop_notebook](https://nbviewer.jupyter.org/urls/gitlab.com/morganem/py-workshop-dlf2019/raw/master/notebook_exercises/py_workshop_notebook.ipynb)
+**View this Jupyter Notebook in nbviewer**: [py_workshop_notebook](https://nbviewer.jupyter.org/urls/gitlab.com/morganem/py-workshop-dlf2019/raw/master/nbviewer/py_workshop_allcode.ipynb)
 
 nbviewer's FAQs page for [more information about nbviewer.jupyter.org](https://nbviewer.jupyter.org/faq)
 

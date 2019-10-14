@@ -6,18 +6,16 @@ This is meant to be a a fun and beginner-friendly introduction to a few useful P
 
 
 ### Jupyter Notebook for Workshop 
+Notebook file location in this repository: notebook_exercises/py_workshop_notebook.ipynb.   
 
-The jupyter notebook file in this repository contains all exercises and code for the workshop.   It is located in:  
-notebook_exercises/py_workshop_notebook.ipynb
-
-If you have the Jupyter Notebook software installed on your own computer, you can download the repository and run the notebook locally.   
-
-Alternatively, run the notebook in Binder via the link below.  
-Note that Binder can be slow to load -- 2-8 minutes for the notebook to load after opening this URL could happen! 
+The notebook contains all exercises and code for the workshop.   
 
 #### Binder location for Jupyter Notebook from github:  
-Binder location for notebook from github: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/morganem0/py-workshop-DLF2019/master)
+Binder location for notebook from github: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/morganem0/py-workshop-DLF2019/master)   
 
+Note that Binder can be slow to load -- 2-8 minutes for the notebook to load after opening this URL could happen! 
+
+Alternatively, if you have the Jupyter Notebook software installed on your own computer, you can also download the repository and run the notebook locally.   
 
 ### Workshop Outline
 

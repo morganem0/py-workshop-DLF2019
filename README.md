@@ -28,22 +28,3 @@ We will walk through three brief examples with digital collections metadata file
 | Example 2: Compare a group of metadata files | 12 mins| 
 | Example 3: Merge info from separate files  |  12 mins | 
 | Wrap-up: review resources, options for installing/running python | 5 mins| 
-
-
-### Backup options: Static Versions of Notebook 
-
-#### Jupyter Notebook Viewer:
-* nbviewer.jupyter.org provides a viewer that renders notebook code and markdown as static HTML page.   
-* The static version of the notebook shows all code executed, so you can read the code and see the outputs.  
-
-**View this Jupyter Notebook in nbviewer**: [py_workshop_notebook](https://nbviewer.jupyter.org/urls/gitlab.com/morganem/py-workshop-dlf2019/raw/master/nbviewer/py_workshop_allcode.ipynb)
-
-nbviewer's FAQs page for [more information about nbviewer.jupyter.org](https://nbviewer.jupyter.org/faq)
-
-#### Static versions in repository 
-This repository also contains static versions of the notebook: 
-* **notebook_markdown/py_workshop.md** : best option for viewing rendered notebook within repository 
-* **notebook_exercises/py_workshop.ipynb** : notebook formatting rendering is sometimes weird in gitlab, and often fails in github, but this might also work for direct viewing
-
-### Backup Binder location 
-Back-up Binder location for notebook from gitlab: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gl/morganem%2Fpy-workshop-dlf2019/master)
